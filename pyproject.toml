@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "greanshop"
+version = "0.1.0"
+description = ""
+authors = ["BlackClover002 <nursultannuraliev586@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+djangorestframework = "^3.15.2"
+pillow = "^11.1.0"
+drf-spectacular = "^0.28.0"
+drf-spectacular-sidecar = "^2025.3.1"
+djangorestframework-simplejwt = "^5.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
