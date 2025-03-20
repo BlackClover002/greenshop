@@ -35,6 +35,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+
 class PostImage(models.Model):
     post = models.ForeignKey(
         to=Post,
@@ -51,7 +52,6 @@ class PostImage(models.Model):
         verbose_name_plural = 'Изображения статей'
 
 
-
 @receiver(post_delete, sender=Post)
 def post_delete_receiver(sender, instance, **kwargs):
     if hasattr(instance, 'images'):
@@ -59,4 +59,3 @@ def post_delete_receiver(sender, instance, **kwargs):
             if os.path.exists(image.image.path):
                 os.remove(image.image.path)
             image.delete()
-

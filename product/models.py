@@ -1,6 +1,6 @@
 
 from django.db import models
-from product.choises import PlantSizeChoices
+from product.choices import PlantSizeChoices
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
 import os
