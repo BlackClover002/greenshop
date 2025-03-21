@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from product.views import *
 from django.conf import settings
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from rest_framework_simplejwt.views import (
@@ -22,7 +23,9 @@ swagger_urlpatterns = [
 
 apps_urlpatterns = [
     path('api/v1/plant', include('product.urls')),
+    path('api/v1/poats', include('post.urls')),
 ]
+
 
 urlpatterns += swagger_urlpatterns
 

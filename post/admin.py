@@ -1,3 +1,12 @@
 from django.contrib import admin
 
-# Register your models here.
+from post.models import Post, PostImage
+
+
+@admin.register(Post)
+class PostImageAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(PostImage)
+class PostImageAdmin(admin.ModelAdmin):
+    pass

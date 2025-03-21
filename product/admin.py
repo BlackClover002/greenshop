@@ -1,6 +1,8 @@
 
 from django.contrib import admin
-from .models import Plant, Category, Tag
+
+
+from .models import Plant, Category, Tag, PlantImage
 
 
 
@@ -14,5 +16,9 @@ class PlantAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(Tag)
+class PlantAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(PlantImage)
 class PlantAdmin(admin.ModelAdmin):
     pass
