@@ -33,7 +33,7 @@ class PlantAPIView(APIView):
 
 class CategoryApiView(APIView):
     def get(self, request):
-        categories = Category.objects.annotate(product_count=Count('plants'))
+        categories = Category.objects.annotate(reproduct_count=Count('plants'))
         serializer = CategorySerializer(categories, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
